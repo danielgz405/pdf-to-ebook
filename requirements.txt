@@ -10,21 +10,26 @@ sqlalchemy[asyncio]==2.0.25
 asyncpg==0.29.0
 alembic==1.13.1
 
-# MongoDB
-motor==3.3.2
+# MongoDB (Versiones sincronizadas para evitar ImportError)
+motor==3.4.0
+pymongo==4.6.3
 pydantic==2.5.3
 pydantic-settings==2.1.0
 
 # --- Motor de IA y OCR ---
-# Nota: Requiere CUDA Toolkit 11.8 o 12.x instalado en el sistema
-paddlepaddle-gpu==2.6.0
-paddleocr>=2.7.0
+# Pinned a 2.6.1 para mejor soporte de Python 3.12
+paddlepaddle-gpu==2.6.1
+paddleocr==3.4.0
 pymupdf==1.23.8
 
 # --- Procesamiento de Imágenes y Texto ---
 opencv-python==4.9.0.80
-numpy==1.26.3
+# CRÍTICO: Numpy debe ser < 2.0.0 para ser compatible con PaddlePaddle
+numpy==1.26.4
 python-dotenv==1.0.0
+# Dependencias necesarias para imgaug/paddle
+scipy==1.12.0
+imgaug==0.4.0
 
 # --- Generación de E-books ---
 EbookLib==0.18
