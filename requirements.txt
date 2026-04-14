@@ -1,0 +1,36 @@
+# --- Framework Web y Servidor ---
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+
+# --- Bases de Datos (Asíncronas) ---
+# PostgreSQL
+sqlalchemy[asyncio]==2.0.25
+asyncpg==0.29.0
+alembic==1.13.1
+
+# MongoDB
+motor==3.3.2
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# --- Motor de IA y OCR ---
+# Nota: Requiere CUDA Toolkit 11.8 o 12.x instalado en el sistema
+paddlepaddle-gpu==2.6.0
+paddleocr>=2.7.0
+pymupdf==1.23.8
+
+# --- Procesamiento de Imágenes y Texto ---
+opencv-python==4.9.0.80
+numpy==1.26.3
+python-dotenv==1.0.0
+
+# --- Generación de E-books ---
+EbookLib==0.18
+lxml==5.1.0
+pypandoc==1.12
+
+# --- Utilidades ---
+loguru==0.7.2
+psutil==5.9.8

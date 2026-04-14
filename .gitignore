@@ -1,0 +1,49 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+*.egg-info/
+
+# --- Variables de Entorno (SEGURIDAD) ---
+.env
+.flaskenv
+
+# --- Almacenamiento Local (Evita subir libros y temporales) ---
+storage/uploads/*
+storage/temp/*
+storage/processed/*
+
+# Excepciones para mantener la estructura de carpetas en Git
+!storage/uploads/.gitkeep
+!storage/temp/.gitkeep
+!storage/processed/.gitkeep
+
+# --- Modelos de IA (Pesados) ---
+# PaddleOCR descarga modelos automáticamente, no los queremos en Git
+models/
+inference/
+*.pdmodel
+*.pdiparams
+*.pdiparams.info
+
+# --- Base de Datos ---
+*.db
+*.sqlite3
+
+# --- IDEs y Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
